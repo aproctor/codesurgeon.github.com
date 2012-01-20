@@ -1,0 +1,77 @@
+/* Mustafa K. Isik
+   http://codesurgeon.com
+   v0.2 | January 20th, 2012
+   License: CC 3.0 BY-NC-SA
+*/
+
+body {
+	line-height: 1.2;
+	font-family: 'Lora', serif;
+	font-size: 11pt;
+	background-color: #F8F8F8;
+	
+}
+
+article {
+	margin: 20px 25% 18px 25%;
+	width: 640px;
+}
+
+footer {
+	margin: 40px 25% 18px 25%;
+	border-top-style: solid;
+	border-top-width: 1px;
+	width: 640px;
+	font-size: 9pt;
+}
+
+.fb-comments {
+	margin: 40px 25% 18px 25%;
+	width: 640px;
+}
+
+h1 {
+	font-family: 'Francois One', sans-serif;
+	font-size: 24pt;
+	padding-top: 12px;
+	padding-bottom: 3px;
+}
+
+h2 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 18pt;
+	padding-top: 9px;
+	padding-bottom: 3px;
+
+}
+
+hgroup > h2 {
+	font-family: 'Francois One', sans-serif;
+	font-size: 18pt;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.inlinebox {
+	padding-top: 9px;
+	-moz-box-shadow: 5px 5px 5px #888;
+	-webkit-box-shadow: 5px 5px 5px #888;
+	box-shadow: 5px 5px 5px #888;
+}
+
+.intro {
+	padding-top: 15px;
+}
+
+a:link {
+	color: #4747C8;
+	text-decoration: none;
+}
+a:visited {
+	color: #821874;
+	text-decoration: none;
+}
+a:hover {
+	color: #F8F8F8;
+	background-color: #736F6E;
+}
