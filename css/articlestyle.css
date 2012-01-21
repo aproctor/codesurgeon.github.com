@@ -9,12 +9,12 @@ body {
 	font-family: 'Lora', serif;
 	font-size: 11pt;
 	background-color: #F8F8F8;
-	
 }
 
 article {
 	margin: 20px 25% 18px 25%;
 	width: 640px;
+	padding-right: 18px;
 }
 
 footer {
@@ -23,6 +23,7 @@ footer {
 	border-top-width: 1px;
 	width: 640px;
 	font-size: 9pt;
+	
 }
 
 .fb {
