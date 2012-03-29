@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Molyjam Live Streams from around the World</title>
+  <meta name="description" content="Live Video feeds from Molyjam gatherings">
+
+</head>
+<body>
+ 
+  <header>
+
+  </header>
+
+  <a class="origin" id="Guadalajara" href="http://www.twitch.tv/molyjamguadalajara">Guadalajara</a>
+  <a class="origin" id="Lisbon" href="http://www.twitch.tv/4orbidd3n">Lisbon</a>
+  <a class="origin" id="LA" href="http://www.twitch.tv/molyjamla">Los Angeles</a>
+  <a class="origin" id="London" href="http://www.twitch.tv/metzopaino">London</a>
+  <a class="origin" id="Monterrey" href="http://www.twitch.tv/mikealebrije">Monterrey</a>
+  <a class="origin" id="Montreal" href="http://www.justin.tv/molyjammtl">Montreal</a>
+  <a class="origin" id="Munich" href="http://www.twitch.tv/codesurgeon">Munich</a>
+  <a class="origin" id="Sydney" href="http://www.justin.tv/molyjamsydney">Sydney</a>
+  <a class="origin" id="Toronto" href="http://www.justin.tv/molyjamto">Toronto</a>
+  <div id="videofeed">
+    <!-- updated via JavaScript code, see below -->
+  </div>
+  <div id="locationinfo"></div>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+
+//update stream every X seconds
+ var streamingProfiles = $('.origin');
+ var videoIndex = 0;
+ 
+updateEmbedCode();
+
+ function updateEmbedCode() {
+    var accountUrl = streamingProfiles[videoIndex].getAttribute('href');
+    var urlSubStrings = accountUrl.split('/');
+    var userName = urlSubStrings[urlSubStrings.length - 1];
+
+    var embedcode = '<object type="application/x-shockwave-flash" height="480" width="853" id="live_embed_player_flash" data="http://www.justin.tv/widgets/live_embed_player.swf?channel=' + userName + ' bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="allownetworking" value="all" /><param name="movie" value="http://www.justin.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="channel=' + userName + '&auto_play=false&start_volume=25" /></object>';
+
+    //update embed code for new video feed
+    $('#videofeed').html(embedcode);
+    $('#locationinfo').text('Now displaying ' + streamingProfiles[videoIndex].innerHTML);
+    videoIndex = videoIndex % streamingProfiles.length;
+    setTimeout(60000, updateEmbedCode);
+
+   }
+  
+  </script>
+
+</body>
+</html>
